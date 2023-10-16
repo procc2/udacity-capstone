@@ -73,7 +73,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file cloudformation/network.yml \
-              --tags project=capstone-project \
+              --tags project=capstone \
               --stack-name capstone-eks-network \
               --region us-east-2 \
               --parameter-overrides file://cloudformation/network-parameters.json
@@ -82,7 +82,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file cloudformation/cluster.yml \
-              --tags project=capstone-project \
+              --tags project=capstone \
               --stack-name capstone-eks-cluster \
               --region us-east-2 \
               --parameter-overrides file://cloudformation/cluster-parameters.json \
@@ -93,7 +93,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file cloudformation/nodegroup.yml \
-              --tags project=capstone-project \
+              --tags project=capstone \
               --stack-name capstone-eks-nodegroup \
               --region us-east-2 \
               --parameter-overrides file://cloudformation/nodegroup-parameters.json \
@@ -103,7 +103,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file cloudformation/management.yml \
-              --tags project=capstone-project \
+              --tags project=capstone \
               --stack-name capstone-eks-management \
               --region us-east-2 \
               --parameter-overrides file://cloudformation/management-parameters.json \
